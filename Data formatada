@@ -1,0 +1,10 @@
+data1 = input("Informe a data: ")
+if len(data1) ==10:
+  if(data1[2] == "/" and data1[5] == "/"):
+     dia = data1[0:2]
+     mes = data1[3:5]
+     ano = data1[6:10]
+  else:
+     print:("Sem as barras!")
+else:
+    print("Formato inválido!")
