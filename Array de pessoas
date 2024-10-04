@@ -1,0 +1,34 @@
+print("olá")
+pessoas = []
+
+
+while opcao == '1' or opcao == '2' or opcao == '3' or opcao == '4':
+
+  print("\n(1) Incluir pessoa")
+  print("(2) Ver a lista")
+  print("(3) Excluir pessoa")
+  print("(4) Sair")
+
+  opcao = input("\nO que dejesa Fazer? ")
+    
+  if opcao == '1':
+    print("Digite o nome da pessoa:")
+    pessoas.append(input())
+    
+  if opcao == '2':
+    print("\nSua Lista é: \n")
+    pessoas.sort()
+    for i, nome in enumerate(pessoas):
+      
+      print(i+1, nome.upper())
+  if opcao == '3':
+    print("(a) Excluir por nome")
+    print("(b) Excluir por índice")
+    excluir = input("Digite como você gostaria de excluir: ")
+    if excluir == 'a' or excluir == 'A':
+      print("Digite o nome da pessoa para exclusão")
+      pessoas.remove(input())
+    if excluir == 'b' or excluir == 'B':
+      pessoas.pop(int(input()))
+  if opcao == '4':
+    break
